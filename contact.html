@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arya Citra Mineconsult</title>
+    <link rel="icon" href="assets/images/logo_acm.png" type="image/png" />
+    <meta name="description" content="PT Arya Citra Mineconsult - Konsultan pertambangan terpercaya di Indonesia.">
+    <meta name="keywords" content="pertambangan, konsultan, batubara, mining consultant, Indonesia">
+    <meta name="author" content="PT Arya Citra Mineconsult">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script> <!-- Load Alpine.js -->
+  </head>
+  <body class="bg-white text-gray-800">
+  
+  <!-- Header -->
+  <header class="p-6 flex flex-col items-center border-b-4 border-gray-400 bg-white/80 backdrop-blur-md relative w-full">
+    <!-- Real-time Date & Time di Kanan Atas -->
+    <div id="currentTime" class="absolute top-6 right-6 text-gray-700 font-medium text-sm md:text-base"></div>
+
+    <!-- Logo (Selalu di Tengah) -->
+    <div class="flex justify-center w-full">
+      <img src="assets/images/logo_acm.png" alt="PT Arya Citra Mineconsult Logo" class="h-16 w-auto">
+    </div>
+
+    <!-- Navigasi -->
+    <nav class="flex space-x-6 text-lg sm:text-xl">
+      <a href="home.html" class="hover:text-blue-600 hover:scale-110 transition-transform duration-200">Home</a>
+      <a href="about.html" class="hover:text-blue-600 hover:scale-110 transition-transform duration-200">About</a>
+      <a href="gallery.html" class="hover:text-blue-600 hover:scale-110 transition-transform duration-200">Gallery</a>
+      <a href="contact.html" class="hover:text-blue-600 hover:scale-110 transition-transform duration-200">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Script untuk Menampilkan Waktu -->
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('currentTime').innerText = now.toLocaleDateString('en-US', options);
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+
+  <!-- Tambahkan Media Query untuk Responsif -->
+  <style>
+    @media (max-width: 768px) {
+      #currentTime {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <main class="container mx-auto p-6">
+    <h1 class='text-3xl font-bold mb-4'>Contact Us</h1><p>Graha Irama Building, 6th floor, unit A, Jakarta<br>Email: aryacitraminec@gmail.com<br>Phone: +62 812 1030 699</p>
+  </main>
+  
+<footer class="bg-blue-900 text-white text-center p-4 mt-10">
+  <p>&copy; 2006 PT Arya Citra Mineconsult. All rights reserved.</p>
+  <p class="text-sm">Graha Irama Building, 6th floor, unit A, Jakarta </p>
+  <p>Email: aryacitraminec@gmail.com</p> 
+  <p>Phone: +62 812 1030 699</p>
+</footer>
+
+</body>
+</html>
